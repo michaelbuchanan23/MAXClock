@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItemComponent } from '../menu-item/menu-item.component';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
 	menudata = [
-	{ href:"/home", display: "Home"}//,
+	{ href:"/classes/list", display: "Classes"}//,
 	// { href:"/about", display: "About"},
 	// { href:"/users/list", display: "User"},
 	// { href:"/vendors/list", display: "Vendor"},
@@ -16,7 +17,7 @@ export class MenuComponent implements OnInit {
 	// { href: "/purchaserequests/list", display: "Purchase Request"},
 	// { href: "/purchaserequests/review", display: "Review" },
 	// { href: "/users/login", display: "Login/Logout"}
-	// ];
+	 ];
 	
   constructor() { }
 

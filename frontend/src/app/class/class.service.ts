@@ -9,27 +9,31 @@ import {JsonResponse} from '../utility/json-response';
 })
 export class ClassService {
 
-url = "http://localhost:49332/Classes/";
+url = "http://localhost:12459/Classes/";
 
-	list(): Observable<JsonResponse> {
+	List(): Observable<JsonResponse> {
 		return this.http.get(this.url+"List") as Observable<JsonResponse>;
 	}
 
-	get(id: number) : Observable<JsonResponse> {
-		return this.http.get(this.url+"Get/"+id) as Observable<JsonResponse>;
+	Active(): Observable<JsonResponse> {
+		return this.http.get(this.url+"Active") as Observable<JsonResponse>;
 	}
 
-	create(class: Class): Observable<JsonResponse> {
-		return this.http.post(this.url+"Create",class) as Observable<JsonResponse>;
-	}
+	// get(id: number) : Observable<JsonResponse> {
+	// 	return this.http.get(this.url+"Get/"+id) as Observable<JsonResponse>;
+	// }
 
-	change(class: Class): Observable<JsonResponse> {
-		return this.http.post(this.url+"Change",class) as Observable<JsonResponse>;
-	}
+	// create(class: Class): Observable<JsonResponse> {
+	// 	return this.http.post(this.url+"Create",class) as Observable<JsonResponse>;
+	// }
 
-	remove(class: Class): Observable<JsonResponse> {
-		return this.http.post(this.url+"Remove",class) as Observable<JsonResponse>;
-	}
+	// change(class: Class): Observable<JsonResponse> {
+	// 	return this.http.post(this.url+"Change",class) as Observable<JsonResponse>;
+	// }
+
+	// remove(class: Class): Observable<JsonResponse> {
+	// 	return this.http.post(this.url+"Remove",class) as Observable<JsonResponse>;
+	// }
 
   constructor(private http: HttpClient) { }
 }

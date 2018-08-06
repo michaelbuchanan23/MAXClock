@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-menu-item',
+  selector: 'menu-item',
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.css']
 })

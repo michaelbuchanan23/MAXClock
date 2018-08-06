@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+// import { Student } from '../../student/student';
+// import { StudentService } from '../../student/student.service';
+import { ClassService } from '../class.service';
+import { Class } from '../class';
 
 @Component({
   selector: 'app-class-list',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassListComponent implements OnInit {
 
-  constructor() { }
+activeClasses: Class[];
+
+
+  constructor(private classsvc: ClassService) { }
 
   ngOnInit() {
+
+    this.classsvc.Active()
+    .subscribe(resp => {
+      this.activeClasses = resp.Data;
+      console.log(resp);
+    });
   }
 
 }
