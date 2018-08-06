@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.Description;
+using MAXClockAPI.Models;
+using MAXClockAPI.Utilities;
+
+namespace MAXClockAPI.Controllers
+{
+    public class TimestampsController : ApiController
+    {
+        private MAXClockAPIContext db = new MAXClockAPIContext();
+
+		[HttpGet]
+		[ActionName("List")]
+		public JSONResponse ListClasses() {
+
+			return new JSONResponse();
+		}
+
+		[HttpGet]
+		[ActionName("Get")]
+		public JSONResponse GetClass(int id) {
+
+			return new JSONResponse();
+		}
+
+		[HttpPost]
+		[ActionName("Create")]
+		public JSONResponse CreateClass(Timestamp timestamp) {
+
+			return new JSONResponse();
+		}
+
+		[HttpPost]
+		[ActionName("Delete")]
+		public JSONResponse DeleteClass(int id) {
+
+			return new JSONResponse();
+		}
+
+		[HttpPost]
+		[ActionName("In")]
+		public JSONResponse TimeIn(Timestamp timestamp) {
+
+			return new JSONResponse();
+		}
+
+		[HttpPost]
+		[ActionName("Out")]
+		public JSONResponse TimeOut(Timestamp timestamp) {
+
+			return new JSONResponse();
+		}
+    }
+}
